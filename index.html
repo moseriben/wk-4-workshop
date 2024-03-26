@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"/>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/brands.css"/>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/solid.css"/>
+    <title>kahawa kete</title>
+</head>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">Kahawa kete</a>
+            <!-- comes after navbar to toggle and add hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#shop" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact us</a>
+                    </li>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <main>
+        <div class="col-md-8 mx-auto">
+            <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-image-container">
+                        <img class="d-block " src="images/fahmi-fakhrudin-nzyzAUsbV0M-unsplash (1).jpg" alt="Breadcrumb Trail Campground" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Your Perfect Cup Awaits</h3>
+                            <p class="d-none d-sm-block">Whether you prefer a classic espresso or a creative latte, we have something to tantalize your taste buds.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image-container">
+                        <img class="d-block" src="images/pariwat-pannium-FO3XO4JQtlo-unsplash.jpg" alt="React Lake Campground" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>Crafted with Passion</h3>
+                            <p class="d-none d-sm-block">From sourcing high-quality beans to crafting delicious beverages, we pour our hearts into every cup. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image-container">
+                        <img class="d-block " src="./images/istockphoto-1400879519-612x612.jpg" alt="Chrome River Campground" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>A Community Hub</h3>
+                            <p class="d-none d-sm-block">Relax and unwind in our comfortable atmosphere, catch up with friends, or fuel your productivity with our free Wi-Fi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#homeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#homeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+        </div>
+    </main>
+        <div class="container d-flex justify-content-center mt-3">
+            <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Table</button>
+            </div>
+        <div class="modal" id="reserveModal" tabindex="-1">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header bg-dark">
+                  <h5 class="modal-title text-light">Make Reservation</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <form id="reserveForm">
+                        <div class="row mb-3">
+                            <label for="name" class="col col-form-label">Name</label>
+                            <div class="col-12 col-sm-6">
+                                <input type="name" class="form-control" id="name" name="name" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="numberOfpeople" class="col-form-label col">Number of People</label>
+                            <div class="col-12 col-sm-6">
+                                <select name="numberOfpeople" id="numberOfpeople" class="form-select">
+                                    <option value="selected">Select...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>    
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="date" class="col col-form-label">Date</label>
+                            <div class="col-12 col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Select Date">
+                            </div>
+                        </div>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+       
+    </main>
+<body>
+    <footer class="container-fluid footer bg-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2024 Coffe shop</p>
+                    <ul class="list-inline social-icons">
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <p class="contact-info">Contact us: 
+                        <a href="tel:+1234567890">+1 (254) 794091462</a> | 
+                        <a href="mailto:Coffegisho01@gmail.com">Coffe sho01@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <!-- Bootstrap JavaScript plugins -->
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
